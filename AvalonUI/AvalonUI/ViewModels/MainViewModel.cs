@@ -1,43 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Reactive;
+﻿using System.Reactive;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
+using AvalonUI.Interfaces;
 using AvalonUI.Views;
 using ReactiveUI;
+using Splat;
 
 namespace AvalonUI.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
         public bool ShowWindowMenu { get; private set; }
-        public string Greeting => "Testing";
+        public string Greeting { get; private set; } = "";
+        
+        public MainViewModel(ISerialIO serialIO)
+        {
+            serialIO.OnNewData += OnNewData;
+            ShowWindowMenu = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+        }
+
+        private void OnNewData(string obj)
+        {
+            Greeting = obj;
+            this.RaisePropertyChanged(nameof(Greeting));
+        }
 
         public ReactiveCommand<Window, Unit> OnShowPreferences => ReactiveCommand.Create<Window, Unit>( window =>
         {
-            _preferencesWindow ??= new PreferencesWindow
+            if (_preferencesWindow is {IsVisible: true})
             {
-                DataContext = new PreferencesViewModel()
+                _preferencesWindow.Position = window.Position + new PixelVector(50, 50);
+                return Unit.Default;
+            }
+            
+            _preferencesWindow = new PreferencesWindow
+            {
+                DataContext = Locator.Current.GetService<PreferencesViewModel>()
             };
-
-            if (_preferencesWindow.IsVisible) return Unit.Default;
+            
             _preferencesWindow.Show();
             _preferencesWindow.Position = window.Position + new PixelVector(50, 50);
             return Unit.Default;
         });
         
         private PreferencesWindow? _preferencesWindow;
-
-        public MainViewModel()
-        {
-            ShowWindowMenu = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-        }
 
         public void OnClose()
         {

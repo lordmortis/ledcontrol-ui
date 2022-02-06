@@ -1,8 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using AvalonUI.Interfaces;
 using AvalonUI.ViewModels;
 using AvalonUI.Views;
+using Splat;
 
 namespace AvalonUI
 {
@@ -15,18 +17,20 @@ namespace AvalonUI
 
         public override void OnFrameworkInitializationCompleted()
         {
+            Bootstrapper.Register(Locator.CurrentMutable, Locator.Current);
+            
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainViewModel()
+                    DataContext = new MainViewModel(Locator.Current.GetService<ISerialIO>())
                 };
             }
             else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
             {
                 singleViewPlatform.MainView = new MainView
                 {
-                    DataContext = new MainViewModel()
+                    DataContext = new MainViewModel(Locator.Current.GetService<ISerialIO>())
                 };
             }
 

@@ -10,6 +10,9 @@
   <Design.DataContext>
     <viewModels:MainViewModel />
   </Design.DataContext>
-
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel>
+        <Label>Current Color:</Label>
+        <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>    
+    </StackPanel>
+    
 </UserControl>

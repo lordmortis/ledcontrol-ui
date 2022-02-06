@@ -14,10 +14,7 @@
     </Design.DataContext>
     <StackPanel>
         <Label>Preferences</Label>
-        <ComboBox SelectedIndex="-1">
-            <ComboBoxItem>Com1</ComboBoxItem>
-            <ComboBoxItem>Com2</ComboBoxItem>
-        </ComboBox>
+        <ComboBox SelectedIndex="{Binding CurrentPortIndex}" Items="{Binding Ports}"/>
     </StackPanel>
     
 </Window>
