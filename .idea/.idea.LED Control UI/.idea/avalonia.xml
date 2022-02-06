@@ -5,6 +5,7 @@
       <map>
         <entry key="AvalonUI/AvalonUI/Views/MainView.axaml" value="AvalonUI/AvalonUI.NetCore/AvalonUI.NetCore.csproj" />
         <entry key="AvalonUI/AvalonUI/Views/MainWindow.axaml" value="AvalonUI/AvalonUI.NetCore/AvalonUI.NetCore.csproj" />
+        <entry key="AvalonUI/AvalonUI/Views/PreferencesWindow.axaml" value="AvalonUI/AvalonUI.NetCore/AvalonUI.NetCore.csproj" />
       </map>
     </option>
   </component>
