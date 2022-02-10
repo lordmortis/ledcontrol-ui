@@ -1,8 +1,8 @@
-using AvalonUI.Interfaces;
-using AvalonUI.ViewModels;
+using LEDControl.Interfaces;
+using LEDControl.ViewModels;
 using Splat;
 
-namespace AvalonUI;
+namespace LEDControl;
 
 public static class Bootstrapper
 {

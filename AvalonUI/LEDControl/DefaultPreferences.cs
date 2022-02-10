@@ -1,6 +1,6 @@
-using AvalonUI.Interfaces;
+using LEDControl.Interfaces;
 
-namespace AvalonUI;
+namespace LEDControl;
 
 public class DefaultPreferences : IPreferences
 {

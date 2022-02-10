@@ -2,9 +2,9 @@ using System;
 using System.Diagnostics;
 using System.IO.Ports;
 using System.Text;
-using AvalonUI.Interfaces;
+using LEDControl.Interfaces;
 
-namespace AvalonUI;
+namespace LEDControl;
 
 public class DefaultSerialIO : ISerialIO
 {

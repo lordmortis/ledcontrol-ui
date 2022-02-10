@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace AvalonUI.Views
+namespace LEDControl.Views
 {
     public partial class MainView : UserControl
     {

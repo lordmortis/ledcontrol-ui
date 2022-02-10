@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using AvalonUI.Interfaces;
+using LEDControl.Interfaces;
 
-namespace AvalonUI.ViewModels;
+namespace LEDControl.ViewModels;
 
 public class PreferencesViewModel : ViewModelBase
 {

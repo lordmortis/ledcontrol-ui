@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using AvalonUI.ViewModels;
+using LEDControl.ViewModels;
 
-namespace AvalonUI
+namespace LEDControl
 {
     public class ViewLocator : IDataTemplate
     {

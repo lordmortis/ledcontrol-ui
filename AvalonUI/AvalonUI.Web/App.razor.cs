@@ -9,7 +9,7 @@ public partial class App
     {
         base.OnParametersSet();
 
-        WebAppBuilder.Configure<AvalonUI.App>()
+        WebAppBuilder.Configure<LEDControl.App>()
             .UseReactiveUI()
             .SetupWithSingleViewLifetime();
     }

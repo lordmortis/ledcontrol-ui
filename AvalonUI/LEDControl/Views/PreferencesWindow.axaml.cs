@@ -2,9 +2,9 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
-using AvalonUI.ViewModels;
+using LEDControl.ViewModels;
 
-namespace AvalonUI.Views;
+namespace LEDControl.Views;
 
 public partial class PreferencesWindow : ReactiveWindow<PreferencesViewModel>
 {

@@ -1,4 +1,4 @@
-namespace AvalonUI.Interfaces;
+namespace LEDControl.Interfaces;
 
 public interface IPreferences
 {

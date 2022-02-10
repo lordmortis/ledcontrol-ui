@@ -2,12 +2,12 @@
 using System.Runtime.InteropServices;
 using Avalonia;
 using Avalonia.Controls;
-using AvalonUI.Interfaces;
-using AvalonUI.Views;
+using LEDControl.Interfaces;
+using LEDControl.Views;
 using ReactiveUI;
 using Splat;
 
-namespace AvalonUI.ViewModels
+namespace LEDControl.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {

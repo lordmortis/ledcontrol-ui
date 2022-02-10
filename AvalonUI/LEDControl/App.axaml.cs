@@ -1,12 +1,12 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using AvalonUI.Interfaces;
-using AvalonUI.ViewModels;
-using AvalonUI.Views;
+using LEDControl.Interfaces;
+using LEDControl.ViewModels;
+using LEDControl.Views;
 using Splat;
 
-namespace AvalonUI
+namespace LEDControl
 {
     public partial class App : Application
     {

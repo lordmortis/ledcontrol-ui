@@ -2,9 +2,9 @@ using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using AvalonUI.ViewModels;
+using LEDControl.ViewModels;
 
-namespace AvalonUI.Views
+namespace LEDControl.Views
 {
     public partial class MainWindow : Window
     {

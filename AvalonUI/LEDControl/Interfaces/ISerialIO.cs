@@ -1,6 +1,6 @@
 using System;
 
-namespace AvalonUI.Interfaces;
+namespace LEDControl.Interfaces;
 
 public interface ISerialIO
 {
