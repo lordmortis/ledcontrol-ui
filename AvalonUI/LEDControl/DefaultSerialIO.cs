@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.IO.Ports;
 using System.Text;
 using LEDControl.Interfaces;
@@ -8,10 +9,13 @@ namespace LEDControl;
 
 public class DefaultSerialIO : ISerialIO
 {
-    public event Action<string>? OnNewData;
+    public event Action<Proto.Status> OnNewStatus;
     
     private SerialPort? _serialPort;
     private readonly StringBuilder _currentData = new();
+    
+    private byte[] inputBuffer = new byte[1024];
+    private int inputBufferPos = 0;
     
     public string[] GetAvailablePorts()
     {
@@ -27,10 +31,13 @@ public class DefaultSerialIO : ISerialIO
             _serialPort?.Close();
         }
         
-        _serialPort = new SerialPort(port, 115200, Parity.None, 8);
+        _serialPort = new SerialPort(port, 115200, Parity.None, 8, StopBits.One);
+        _serialPort.DiscardNull = false;
+        _serialPort.Encoding = Encoding.GetEncoding("ISO-8859-1");
         _serialPort.Open();
         _serialPort.DataReceived += SerialPortOnDataReceived;
         _serialPort.ErrorReceived += SerialPortOnErrorReceived;
+        _serialPort.DtrEnable = true;
     }
 
     private void SerialPortOnErrorReceived(object sender, SerialErrorReceivedEventArgs e)
@@ -41,24 +48,21 @@ public class DefaultSerialIO : ISerialIO
     private void SerialPortOnDataReceived(object sender, SerialDataReceivedEventArgs e)
     {
         if (_serialPort == null) return;
-        var newData = _serialPort.ReadExisting();
-        int newLineIndex = -1;
-        do
+        var readLength = _serialPort.Read(inputBuffer, inputBufferPos, inputBuffer.Length - inputBufferPos);
+        inputBufferPos += readLength;
+        if (inputBufferPos < 2) return;
+        MemoryStream tempStream = new MemoryStream(inputBuffer);
+        try
         {
-            newLineIndex = newData.IndexOf("\r\n", StringComparison.InvariantCultureIgnoreCase);
-            if (newLineIndex == -1)
-            {
-                if (newData.Length > 0) _currentData.Append(newData);
-                continue;
-            }
+            var status = Proto.Status.Parser.ParseDelimitedFrom(tempStream);
+            OnNewStatus?.Invoke(status);
+        }
+        catch (Exception err)
+        {
+            Debug.WriteLine("Ruh roh");
+            Debug.Write(err.ToString());
+            Debug.Write(err.StackTrace);
+        }
 
-            _currentData.Append(newData.Substring(0, newLineIndex));
-            OnNewData?.Invoke(_currentData.ToString());
-            _currentData.Clear();
-            int newStart = newLineIndex + 2;
-            int length = newData.Length - newStart;
-            newData = newData.Substring(newStart, length);
-        } while (newLineIndex != -1);
-        
     }
 }

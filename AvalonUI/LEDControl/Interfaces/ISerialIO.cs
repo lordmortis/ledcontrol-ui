@@ -4,7 +4,7 @@ namespace LEDControl.Interfaces;
 
 public interface ISerialIO
 {
-    event Action<string> OnNewData;
+    event Action<Proto.Status> OnNewStatus;
     string[] GetAvailablePorts();
     void SetPort(string port);
 }

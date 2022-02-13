@@ -16,13 +16,13 @@ namespace LEDControl.ViewModels
         
         public MainViewModel(ISerialIO serialIO)
         {
-            serialIO.OnNewData += OnNewData;
+            serialIO.OnNewStatus += OnNewStatus;
             ShowWindowMenu = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
         }
 
-        private void OnNewData(string obj)
+        private void OnNewStatus(Proto.Status status)
         {
-            Greeting = obj;
+            Greeting = $"{status.Current}";
             this.RaisePropertyChanged(nameof(Greeting));
         }
 

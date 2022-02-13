@@ -24,48 +24,50 @@ namespace LEDControl.Proto {
     static TypesReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgt0eXBlcy5wcm90bxIQTEVEQ29udHJvbC5Qcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90",
-            "byIbCgpCcmlnaHRuZXNzEg0KBXZhbHVlGAEgASgCIjwKCkNvbG9yVmFsdWUS",
-            "DgoGdmFsdWUxGAEgASgCEg4KBnZhbHVlMhgCIAEoAhIOCgZ2YWx1ZTMYAyAB",
-            "KAIicQoSQ29sb3JWYWx1ZVdpdGhUeXBlEikKBHR5cGUYASABKA4yGy5MRURD",
-            "b250cm9sLlByb3RvLkNvbG9yVHlwZRIwCgpjb2xvclZhbHVlGAIgASgLMhwu",
-            "TEVEQ29udHJvbC5Qcm90by5Db2xvclZhbHVlIq8BCgREYXRhEikKBHR5cGUY",
-            "ASABKA4yGy5MRURDb250cm9sLlByb3RvLkRhdGEuVHlwZRIlCgdwYXlsb2Fk",
-            "GAIgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueSJVCgRUeXBlEgkKBUVSUk9S",
-            "EAASCAoEVElNRRABEgwKCFNFVF9USU1FEAISDwoLU0VUVVBfU1RSSVAQAxIL",
-            "CgdQQVRURVJOEAQSDAoIU0VRVUVOQ0UQBiI4CgdTZXRUaW1lEi0KCXRpbWVz",
-            "dGFtcBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiuQEKClN0",
-            "cmlwU2V0dXASDwoHbnVtTEVEcxgBIAEoDRIMCgRyZ2J3GAIgASgIEjsKCmNv",
-            "bG9yT3JkZXIYAyABKA4yJy5MRURDb250cm9sLlByb3RvLlN0cmlwU2V0dXAu",
-            "Q29sb3JPcmRlchILCgNmcHMYBCABKA0iQgoKQ29sb3JPcmRlchIHCgNSR0IQ",
-            "ABIHCgNSQkcQARIHCgNHUkIQAhIHCgNHQlIQAxIHCgNCUkcQBBIHCgNCR1IQ",
-            "BSJnCgdMRUREYXRhEi4KCWNvbG9yVHlwZRgBIAEoDjIbLkxFRENvbnRyb2wu",
-            "UHJvdG8uQ29sb3JUeXBlEiwKBmNvbG9ycxgCIAMoCzIcLkxFRENvbnRyb2wu",
-            "UHJvdG8uQ29sb3JWYWx1ZSLXAwoHUGF0dGVybhIuCgljb2xvclR5cGUYASAB",
-            "KA4yGy5MRURDb250cm9sLlByb3RvLkNvbG9yVHlwZRI6CgtwYXR0ZXJuVHlw",
-            "ZRgCIAEoDjIlLkxFRENvbnRyb2wuUHJvdG8uUGF0dGVybi5QYXR0ZXJuVHlw",
-            "ZRI6CghlbGVtZW50cxgEIAMoCzIoLkxFRENvbnRyb2wuUHJvdG8uUGF0dGVy",
-            "bi5QYXR0ZXJuRWxlbWVudBIZChFhbmltYXRpb25SYXRlSW5NUxgFIAEoDRpP",
-            "Cg5QYXR0ZXJuRWxlbWVudBIQCghwb3NpdGlvbhgBIAEoDRIrCgVjb2xvchgC",
-            "IAEoCzIcLkxFRENvbnRyb2wuUHJvdG8uQ29sb3JWYWx1ZSI4CgtQYXR0ZXJu",
-            "VHlwZRIPCgtDb2xvclZhbHVlcxAAEgwKCEdyYWRpZW50EAESCgoGUmFuZG9t",
-            "EAIifgoNQW5pbWF0aW9uVHlwZRIICgROb25lEAASEQoNU2Nyb2xsRm9yd2Fy",
-            "ZBABEg4KClNjcm9sbEJhY2sQAhISCg5UcmFuc2l0aW9uT25jZRADEhYKElRy",
-            "YW5zaXRpb25QaW5nUG9uZxAEEhQKEFRyYW5zaXRpb25SZXBlYXQQBSJTCg9T",
-            "ZXF1ZW5jZUVsZW1lbnQSFAoMZHVyYXRpb25Jbk1zGAEgASgNEioKB3BhdHRl",
-            "cm4YAiABKAsyGS5MRURDb250cm9sLlByb3RvLlBhdHRlcm4iPwoIU2VxdWVu",
-            "Y2USMwoIZWxlbWVudHMYASADKAsyIS5MRURDb250cm9sLlByb3RvLlNlcXVl",
-            "bmNlRWxlbWVudCodCglDb2xvclR5cGUSBwoDSFNWEAASBwoDUkdCEAFiBnBy",
-            "b3RvMw=="));
+            "Cgt0eXBlcy5wcm90bxIQTEVEQ29udHJvbC5Qcm90byIbCgpCcmlnaHRuZXNz",
+            "Eg0KBXZhbHVlGAEgASgCIjwKCkNvbG9yVmFsdWUSDgoGdmFsdWUxGAEgASgC",
+            "Eg4KBnZhbHVlMhgCIAEoAhIOCgZ2YWx1ZTMYAyABKAIicQoSQ29sb3JWYWx1",
+            "ZVdpdGhUeXBlEikKBHR5cGUYASABKA4yGy5MRURDb250cm9sLlByb3RvLkNv",
+            "bG9yVHlwZRIwCgpjb2xvclZhbHVlGAIgASgLMhwuTEVEQ29udHJvbC5Qcm90",
+            "by5Db2xvclZhbHVlIpsBCgREYXRhEikKBHR5cGUYASABKA4yGy5MRURDb250",
+            "cm9sLlByb3RvLkRhdGEuVHlwZRIPCgdwYXlsb2FkGAIgASgMIlcKBFR5cGUS",
+            "CQoFRVJST1IQABIKCgZTVEFUVVMQARIMCghTRVRfVElNRRACEg8KC1NFVFVQ",
+            "X1NUUklQEAMSCwoHUEFUVEVSThAEEgwKCFNFUVVFTkNFEAYiFgoFRXJyb3IS",
+            "DQoFZXJyb3IYASABKAkiRAoGU3RhdHVzEikKBHRpbWUYASABKAsyGy5MRURD",
+            "b250cm9sLlByb3RvLlRpbWVTdGFtcBIPCgdjdXJyZW50GAIgASgCIisKCVRp",
+            "bWVTdGFtcBIPCgdzZWNvbmRzGAEgASgEEg0KBW5hbm9zGAIgASgNIrkBCgpT",
+            "dHJpcFNldHVwEg8KB251bUxFRHMYASABKA0SDAoEcmdidxgCIAEoCBI7Cgpj",
+            "b2xvck9yZGVyGAMgASgOMicuTEVEQ29udHJvbC5Qcm90by5TdHJpcFNldHVw",
+            "LkNvbG9yT3JkZXISCwoDZnBzGAQgASgNIkIKCkNvbG9yT3JkZXISBwoDUkdC",
+            "EAASBwoDUkJHEAESBwoDR1JCEAISBwoDR0JSEAMSBwoDQlJHEAQSBwoDQkdS",
+            "EAUiZwoHTEVERGF0YRIuCgljb2xvclR5cGUYASABKA4yGy5MRURDb250cm9s",
+            "LlByb3RvLkNvbG9yVHlwZRIsCgZjb2xvcnMYAiADKAsyHC5MRURDb250cm9s",
+            "LlByb3RvLkNvbG9yVmFsdWUi1wMKB1BhdHRlcm4SLgoJY29sb3JUeXBlGAEg",
+            "ASgOMhsuTEVEQ29udHJvbC5Qcm90by5Db2xvclR5cGUSOgoLcGF0dGVyblR5",
+            "cGUYAiABKA4yJS5MRURDb250cm9sLlByb3RvLlBhdHRlcm4uUGF0dGVyblR5",
+            "cGUSOgoIZWxlbWVudHMYBCADKAsyKC5MRURDb250cm9sLlByb3RvLlBhdHRl",
+            "cm4uUGF0dGVybkVsZW1lbnQSGQoRYW5pbWF0aW9uUmF0ZUluTVMYBSABKA0a",
+            "TwoOUGF0dGVybkVsZW1lbnQSEAoIcG9zaXRpb24YASABKA0SKwoFY29sb3IY",
+            "AiABKAsyHC5MRURDb250cm9sLlByb3RvLkNvbG9yVmFsdWUiOAoLUGF0dGVy",
+            "blR5cGUSDwoLQ29sb3JWYWx1ZXMQABIMCghHcmFkaWVudBABEgoKBlJhbmRv",
+            "bRACIn4KDUFuaW1hdGlvblR5cGUSCAoETm9uZRAAEhEKDVNjcm9sbEZvcndh",
+            "cmQQARIOCgpTY3JvbGxCYWNrEAISEgoOVHJhbnNpdGlvbk9uY2UQAxIWChJU",
+            "cmFuc2l0aW9uUGluZ1BvbmcQBBIUChBUcmFuc2l0aW9uUmVwZWF0EAUiUwoP",
+            "U2VxdWVuY2VFbGVtZW50EhQKDGR1cmF0aW9uSW5NcxgBIAEoDRIqCgdwYXR0",
+            "ZXJuGAIgASgLMhkuTEVEQ29udHJvbC5Qcm90by5QYXR0ZXJuIj8KCFNlcXVl",
+            "bmNlEjMKCGVsZW1lbnRzGAEgAygLMiEuTEVEQ29udHJvbC5Qcm90by5TZXF1",
+            "ZW5jZUVsZW1lbnQqHQoJQ29sb3JUeXBlEgcKA0hTVhAAEgcKA1JHQhABYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::LEDControl.Proto.ColorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.Brightness), global::LEDControl.Proto.Brightness.Parser, new[]{ "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.ColorValue), global::LEDControl.Proto.ColorValue.Parser, new[]{ "Value1", "Value2", "Value3" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.ColorValueWithType), global::LEDControl.Proto.ColorValueWithType.Parser, new[]{ "Type", "ColorValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.Data), global::LEDControl.Proto.Data.Parser, new[]{ "Type", "Payload" }, null, new[]{ typeof(global::LEDControl.Proto.Data.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.SetTime), global::LEDControl.Proto.SetTime.Parser, new[]{ "Timestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.Error), global::LEDControl.Proto.Error.Parser, new[]{ "Error_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.Status), global::LEDControl.Proto.Status.Parser, new[]{ "Time", "Current" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.TimeStamp), global::LEDControl.Proto.TimeStamp.Parser, new[]{ "Seconds", "Nanos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.StripSetup), global::LEDControl.Proto.StripSetup.Parser, new[]{ "NumLEDs", "Rgbw", "ColorOrder", "Fps" }, null, new[]{ typeof(global::LEDControl.Proto.StripSetup.Types.ColorOrder) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.LEDData), global::LEDControl.Proto.LEDData.Parser, new[]{ "ColorType", "Colors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.Pattern), global::LEDControl.Proto.Pattern.Parser, new[]{ "ColorType", "PatternType", "Elements", "AnimationRateInMS" }, null, new[]{ typeof(global::LEDControl.Proto.Pattern.Types.PatternType), typeof(global::LEDControl.Proto.Pattern.Types.AnimationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::LEDControl.Proto.Pattern.Types.PatternElement), global::LEDControl.Proto.Pattern.Types.PatternElement.Parser, new[]{ "Position", "Color" }, null, null, null, null)}),
@@ -807,7 +809,7 @@ namespace LEDControl.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Data(Data other) : this() {
       type_ = other.type_;
-      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
+      payload_ = other.payload_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -831,13 +833,13 @@ namespace LEDControl.Proto {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::Google.Protobuf.WellKnownTypes.Any payload_;
+    private pb::ByteString payload_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Any Payload {
+    public pb::ByteString Payload {
       get { return payload_; }
       set {
-        payload_ = value;
+        payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -857,7 +859,7 @@ namespace LEDControl.Proto {
         return true;
       }
       if (Type != other.Type) return false;
-      if (!object.Equals(Payload, other.Payload)) return false;
+      if (Payload != other.Payload) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -866,7 +868,7 @@ namespace LEDControl.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::LEDControl.Proto.Data.Types.Type.Error) hash ^= Type.GetHashCode();
-      if (payload_ != null) hash ^= Payload.GetHashCode();
+      if (Payload.Length != 0) hash ^= Payload.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -889,9 +891,9 @@ namespace LEDControl.Proto {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (payload_ != null) {
+      if (Payload.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteMessage(Payload);
+        output.WriteBytes(Payload);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -907,9 +909,9 @@ namespace LEDControl.Proto {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (payload_ != null) {
+      if (Payload.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteMessage(Payload);
+        output.WriteBytes(Payload);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -924,8 +926,8 @@ namespace LEDControl.Proto {
       if (Type != global::LEDControl.Proto.Data.Types.Type.Error) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (payload_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
+      if (Payload.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Payload);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -942,11 +944,8 @@ namespace LEDControl.Proto {
       if (other.Type != global::LEDControl.Proto.Data.Types.Type.Error) {
         Type = other.Type;
       }
-      if (other.payload_ != null) {
-        if (payload_ == null) {
-          Payload = new global::Google.Protobuf.WellKnownTypes.Any();
-        }
-        Payload.MergeFrom(other.Payload);
+      if (other.Payload.Length != 0) {
+        Payload = other.Payload;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -968,10 +967,7 @@ namespace LEDControl.Proto {
             break;
           }
           case 18: {
-            if (payload_ == null) {
-              Payload = new global::Google.Protobuf.WellKnownTypes.Any();
-            }
-            input.ReadMessage(Payload);
+            Payload = input.ReadBytes();
             break;
           }
         }
@@ -994,10 +990,7 @@ namespace LEDControl.Proto {
             break;
           }
           case 18: {
-            if (payload_ == null) {
-              Payload = new global::Google.Protobuf.WellKnownTypes.Any();
-            }
-            input.ReadMessage(Payload);
+            Payload = input.ReadBytes();
             break;
           }
         }
@@ -1012,7 +1005,7 @@ namespace LEDControl.Proto {
     public static partial class Types {
       public enum Type {
         [pbr::OriginalName("ERROR")] Error = 0,
-        [pbr::OriginalName("TIME")] Time = 1,
+        [pbr::OriginalName("STATUS")] Status = 1,
         [pbr::OriginalName("SET_TIME")] SetTime = 2,
         [pbr::OriginalName("SETUP_STRIP")] SetupStrip = 3,
         [pbr::OriginalName("PATTERN")] Pattern = 4,
@@ -1024,16 +1017,16 @@ namespace LEDControl.Proto {
 
   }
 
-  public sealed partial class SetTime : pb::IMessage<SetTime>
+  public sealed partial class Error : pb::IMessage<Error>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SetTime> _parser = new pb::MessageParser<SetTime>(() => new SetTime());
+    private static readonly pb::MessageParser<Error> _parser = new pb::MessageParser<Error>(() => new Error());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SetTime> Parser { get { return _parser; } }
+    public static pb::MessageParser<Error> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1049,7 +1042,7 @@ namespace LEDControl.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SetTime() {
+    public Error() {
       OnConstruction();
     }
 
@@ -1057,45 +1050,45 @@ namespace LEDControl.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SetTime(SetTime other) : this() {
-      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+    public Error(Error other) : this() {
+      error_ = other.error_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SetTime Clone() {
-      return new SetTime(this);
+    public Error Clone() {
+      return new Error(this);
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 1;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
+    /// <summary>Field number for the "error" field.</summary>
+    public const int Error_FieldNumber = 1;
+    private string error_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
-      get { return timestamp_; }
+    public string Error_ {
+      get { return error_; }
       set {
-        timestamp_ = value;
+        error_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SetTime);
+      return Equals(other as Error);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SetTime other) {
+    public bool Equals(Error other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Timestamp, other.Timestamp)) return false;
+      if (Error_ != other.Error_) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1103,7 +1096,7 @@ namespace LEDControl.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+      if (Error_.Length != 0) hash ^= Error_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1122,9 +1115,9 @@ namespace LEDControl.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (timestamp_ != null) {
+      if (Error_.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Timestamp);
+        output.WriteString(Error_);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1136,9 +1129,9 @@ namespace LEDControl.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (timestamp_ != null) {
+      if (Error_.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Timestamp);
+        output.WriteString(Error_);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1150,8 +1143,8 @@ namespace LEDControl.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (timestamp_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+      if (Error_.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Error_);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1161,15 +1154,12 @@ namespace LEDControl.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SetTime other) {
+    public void MergeFrom(Error other) {
       if (other == null) {
         return;
       }
-      if (other.timestamp_ != null) {
-        if (timestamp_ == null) {
-          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        Timestamp.MergeFrom(other.Timestamp);
+      if (other.Error_.Length != 0) {
+        Error_ = other.Error_;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1187,10 +1177,7 @@ namespace LEDControl.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(Timestamp);
+            Error_ = input.ReadString();
             break;
           }
         }
@@ -1209,10 +1196,468 @@ namespace LEDControl.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            Error_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class Status : pb::IMessage<Status>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Status> _parser = new pb::MessageParser<Status>(() => new Status());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Status> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Status() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Status(Status other) : this() {
+      time_ = other.time_ != null ? other.time_.Clone() : null;
+      current_ = other.current_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Status Clone() {
+      return new Status(this);
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 1;
+    private global::LEDControl.Proto.TimeStamp time_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::LEDControl.Proto.TimeStamp Time {
+      get { return time_; }
+      set {
+        time_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "current" field.</summary>
+    public const int CurrentFieldNumber = 2;
+    private float current_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Current {
+      get { return current_; }
+      set {
+        current_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Status);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Status other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Time, other.Time)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Current, other.Current)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (time_ != null) hash ^= Time.GetHashCode();
+      if (Current != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Current);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (time_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Time);
+      }
+      if (Current != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Current);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (time_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Time);
+      }
+      if (Current != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Current);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (time_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
+      }
+      if (Current != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Status other) {
+      if (other == null) {
+        return;
+      }
+      if (other.time_ != null) {
+        if (time_ == null) {
+          Time = new global::LEDControl.Proto.TimeStamp();
+        }
+        Time.MergeFrom(other.Time);
+      }
+      if (other.Current != 0F) {
+        Current = other.Current;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (time_ == null) {
+              Time = new global::LEDControl.Proto.TimeStamp();
             }
-            input.ReadMessage(Timestamp);
+            input.ReadMessage(Time);
+            break;
+          }
+          case 21: {
+            Current = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (time_ == null) {
+              Time = new global::LEDControl.Proto.TimeStamp();
+            }
+            input.ReadMessage(Time);
+            break;
+          }
+          case 21: {
+            Current = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TimeStamp : pb::IMessage<TimeStamp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TimeStamp> _parser = new pb::MessageParser<TimeStamp>(() => new TimeStamp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TimeStamp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeStamp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeStamp(TimeStamp other) : this() {
+      seconds_ = other.seconds_;
+      nanos_ = other.nanos_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeStamp Clone() {
+      return new TimeStamp(this);
+    }
+
+    /// <summary>Field number for the "seconds" field.</summary>
+    public const int SecondsFieldNumber = 1;
+    private ulong seconds_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Seconds {
+      get { return seconds_; }
+      set {
+        seconds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nanos" field.</summary>
+    public const int NanosFieldNumber = 2;
+    private uint nanos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Nanos {
+      get { return nanos_; }
+      set {
+        nanos_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TimeStamp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TimeStamp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Seconds != other.Seconds) return false;
+      if (Nanos != other.Nanos) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Seconds != 0UL) hash ^= Seconds.GetHashCode();
+      if (Nanos != 0) hash ^= Nanos.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Seconds != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Seconds);
+      }
+      if (Nanos != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Nanos);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Seconds != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Seconds);
+      }
+      if (Nanos != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Nanos);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Seconds != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Seconds);
+      }
+      if (Nanos != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Nanos);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TimeStamp other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Seconds != 0UL) {
+        Seconds = other.Seconds;
+      }
+      if (other.Nanos != 0) {
+        Nanos = other.Nanos;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Seconds = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Nanos = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Seconds = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Nanos = input.ReadUInt32();
             break;
           }
         }
@@ -1236,7 +1681,7 @@ namespace LEDControl.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1553,7 +1998,7 @@ namespace LEDControl.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1768,7 +2213,7 @@ namespace LEDControl.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2315,7 +2760,7 @@ namespace LEDControl.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2550,7 +2995,7 @@ namespace LEDControl.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::LEDControl.Proto.TypesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
