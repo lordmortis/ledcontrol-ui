@@ -56,6 +56,7 @@ public class DefaultSerialIO : ISerialIO
         {
             var status = Proto.Status.Parser.ParseDelimitedFrom(tempStream);
             OnNewStatus?.Invoke(status);
+            inputBufferPos = 0;
         }
         catch (Exception err)
         {

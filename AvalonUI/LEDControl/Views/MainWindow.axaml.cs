@@ -3,6 +3,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using LEDControl.ViewModels;
+using Splat;
 
 namespace LEDControl.Views
 {
@@ -21,7 +22,7 @@ namespace LEDControl.Views
             AvaloniaXamlLoader.Load(this);
             Closing += (sender, args) =>
             {
-                if (DataContext is not MainViewModel actualContext) return;
+                if (DataContext is not MainWindowViewModel actualContext) return;
                 actualContext.OnClose();
             };
         }

@@ -3,7 +3,7 @@ using LEDControl.Interfaces;
 
 namespace LEDControl.ViewModels;
 
-public class PreferencesViewModel : ViewModelBase
+public class PreferencesViewModel : ViewModelBase, IPreferencesViewModel
 {
     public IReadOnlyList<string> Ports { get; private set; }
 

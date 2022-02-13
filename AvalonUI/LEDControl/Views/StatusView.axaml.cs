@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace LEDControl.Views
 {
-    public partial class MainView : UserControl
+    public partial class StatusView : UserControl
     {
-        public MainView()
+        public StatusView()
         {
             InitializeComponent();
         }

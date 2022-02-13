@@ -23,14 +23,14 @@ namespace LEDControl
             {
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainViewModel(Locator.Current.GetService<ISerialIO>())
+                    DataContext = new MainWindowViewModel()
                 };
             }
             else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
             {
-                singleViewPlatform.MainView = new MainView
+                singleViewPlatform.MainView = new StatusView
                 {
-                    DataContext = new MainViewModel(Locator.Current.GetService<ISerialIO>())
+                    DataContext = new MainWindowViewModel()
                 };
             }
 

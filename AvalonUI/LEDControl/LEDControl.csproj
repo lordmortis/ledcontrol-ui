@@ -20,4 +20,9 @@
     <ItemGroup>
       <Folder Include="Proto" />
     </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Views\StatusView.axaml.cs">
+        <DependentUpon>StatusView.axaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
 </Project>

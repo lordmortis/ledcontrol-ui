@@ -11,12 +11,17 @@ public static class Bootstrapper
         services.RegisterLazySingleton<ISerialIO>(() => new DefaultSerialIO());
         services.RegisterLazySingleton<IPreferences>(() => new DefaultPreferences());
         
-        services.Register<PreferencesViewModel>(() =>
+        services.Register<IPreferencesViewModel>(() =>
         {
             var preferences = resolver.GetService<IPreferences>();
             var serialIO = resolver.GetService<ISerialIO>();
             return new PreferencesViewModel(preferences, serialIO);
         });
-            
+        
+        services.Register<IStatusViewModel>(() =>
+        {
+            var serialIO = resolver.GetService<ISerialIO>();
+            return new StatusViewModel(serialIO);
+        });
     }
 }

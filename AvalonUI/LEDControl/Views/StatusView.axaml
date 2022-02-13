@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:LEDControl.ViewModels.Test"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LEDControl.Views.StatusView"
+             Foreground="White"
+             Background="#171C2C"
+             Height="60"
+             Width="320">
+  <Design.DataContext>
+    <viewModels:StatusViewModel />
+  </Design.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">Current Usage</Label>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Current}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Device Time</Label>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Time}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+    </Grid>
+    
+</UserControl>
