@@ -18,6 +18,8 @@ namespace LEDControl
         public override void OnFrameworkInitializationCompleted()
         {
             Bootstrapper.Register(Locator.CurrentMutable, Locator.Current);
+            Bootstrapper.Init();
+            Locator.Current.GetService<IPreferences>().Load();
             
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {

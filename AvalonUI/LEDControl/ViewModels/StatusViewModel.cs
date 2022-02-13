@@ -9,9 +9,10 @@ namespace LEDControl.ViewModels
         public string Current { get; private set; } = "";
         public string Time { get; private set; } = "";
 
-        public StatusViewModel(ISerialIO serialIO)
+        public StatusViewModel(ISerialIO serialIO, IPreferences preferences)
         {
             serialIO.OnNewStatus += OnNewStatus;
+            if (!string.IsNullOrWhiteSpace(preferences.SerialPort)) serialIO.SetPort(preferences.SerialPort);
         }
         
         private void OnNewStatus(Proto.Status status)

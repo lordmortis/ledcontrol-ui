@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using LEDControl.Interfaces;
 
 namespace LEDControl.ViewModels;
@@ -16,6 +17,7 @@ public class PreferencesViewModel : ViewModelBase, IPreferencesViewModel
             _preferences.SerialPort = _ports[value];
             _serialIO.SetPort(_ports[value]);
             _currentPortIndex = value;
+            Task.Run(_preferences.Save);
         }
     }
     

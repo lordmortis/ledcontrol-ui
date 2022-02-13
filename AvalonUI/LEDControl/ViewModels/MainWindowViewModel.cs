@@ -21,7 +21,7 @@ public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
     public MainWindowViewModel()
     {
         ShowWindowMenu = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-        StatusViewModel = Locator.Current.GetService<StatusViewModel>();
+        StatusViewModel = Locator.Current.GetService<IStatusViewModel>();
         OnShowPreferences = ReactiveCommand.Create<Window, Unit>(ShowPreferencesFunc);
     }
     
@@ -40,7 +40,7 @@ public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
             
         _preferencesWindow = new PreferencesWindow
         {
-            DataContext = Locator.Current.GetService<PreferencesViewModel>()
+            DataContext = Locator.Current.GetService<IPreferencesViewModel>()
         };
             
         _preferencesWindow.Show();
